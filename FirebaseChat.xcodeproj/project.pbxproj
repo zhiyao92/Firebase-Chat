@@ -12,6 +12,11 @@
 		7FEDA590211440AB00570744 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FEDA58E211440AB00570744 /* Main.storyboard */; };
 		7FEDA592211440AC00570744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FEDA591211440AC00570744 /* Assets.xcassets */; };
 		7FEDA595211440AC00570744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FEDA593211440AC00570744 /* LaunchScreen.storyboard */; };
+		7FEDA5A1211445F700570744 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7FEDA5A0211445F700570744 /* GoogleService-Info.plist */; };
+		7FEDA5A321144B1300570744 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEDA5A221144B1300570744 /* LoginViewController.swift */; };
+		7FEDA5A521144DC200570744 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEDA5A421144DC200570744 /* MessageTableViewCell.swift */; };
+		7FEDA5A7211454D700570744 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEDA5A6211454D700570744 /* Chat.swift */; };
+		ABB0F5BBE0AD9EA0D103E5D9 /* Pods_FirebaseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CCBC9417C7D25769387C9D /* Pods_FirebaseChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,13 @@
 		7FEDA591211440AC00570744 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FEDA594211440AC00570744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FEDA596211440AC00570744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FEDA5A0211445F700570744 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		7FEDA5A221144B1300570744 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7FEDA5A421144DC200570744 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		7FEDA5A6211454D700570744 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		97CCBC9417C7D25769387C9D /* Pods_FirebaseChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E41736669BD4C8C8B10861 /* Pods-FirebaseChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.release.xcconfig"; sourceTree = "<group>"; };
+		EAB73D10433EC4D418DB55FF /* Pods-FirebaseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB0F5BBE0AD9EA0D103E5D9 /* Pods_FirebaseChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5067695E3C74E8330C65B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97CCBC9417C7D25769387C9D /* Pods_FirebaseChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C08456AF16CA08A296EB313 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAB73D10433EC4D418DB55FF /* Pods-FirebaseChat.debug.xcconfig */,
+				D9E41736669BD4C8C8B10861 /* Pods-FirebaseChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F5663AC211858C400A2939A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FEDA58C211440AB00570744 /* ViewController.swift */,
+				7FEDA5A221144B1300570744 /* LoginViewController.swift */,
+				7FEDA5A421144DC200570744 /* MessageTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7F5663AD211858D600A2939A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FEDA5A6211454D700570744 /* Chat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F5663AE211858D900A2939A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FEDA593211440AC00570744 /* LaunchScreen.storyboard */,
+				7FEDA58E211440AB00570744 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7FEDA57E211440AB00570744 = {
 			isa = PBXGroup;
 			children = (
 				7FEDA589211440AB00570744 /* FirebaseChat */,
 				7FEDA588211440AB00570744 /* Products */,
+				3C08456AF16CA08A296EB313 /* Pods */,
+				0C5067695E3C74E8330C65B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +113,13 @@
 		7FEDA589211440AB00570744 /* FirebaseChat */ = {
 			isa = PBXGroup;
 			children = (
+				7F5663AE211858D900A2939A /* View */,
+				7F5663AD211858D600A2939A /* Model */,
+				7F5663AC211858C400A2939A /* Controller */,
 				7FEDA58A211440AB00570744 /* AppDelegate.swift */,
-				7FEDA58C211440AB00570744 /* ViewController.swift */,
-				7FEDA58E211440AB00570744 /* Main.storyboard */,
 				7FEDA591211440AC00570744 /* Assets.xcassets */,
-				7FEDA593211440AC00570744 /* LaunchScreen.storyboard */,
 				7FEDA596211440AC00570744 /* Info.plist */,
+				7FEDA5A0211445F700570744 /* GoogleService-Info.plist */,
 			);
 			path = FirebaseChat;
 			sourceTree = "<group>";
@@ -71,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FEDA599211440AC00570744 /* Build configuration list for PBXNativeTarget "FirebaseChat" */;
 			buildPhases = (
+				15D394FC76CCE46B2CC2E369 /* [CP] Check Pods Manifest.lock */,
 				7FEDA583211440AB00570744 /* Sources */,
 				7FEDA584211440AB00570744 /* Frameworks */,
 				7FEDA585211440AB00570744 /* Resources */,
+				30E3B053E2D5400D9DB8EC1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FEDA595211440AC00570744 /* LaunchScreen.storyboard in Resources */,
+				7FEDA5A1211445F700570744 /* GoogleService-Info.plist in Resources */,
 				7FEDA592211440AC00570744 /* Assets.xcassets in Resources */,
 				7FEDA590211440AB00570744 /* Main.storyboard in Resources */,
 			);
@@ -130,12 +193,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15D394FC76CCE46B2CC2E369 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30E3B053E2D5400D9DB8EC1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FirebaseChat/Pods-FirebaseChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FEDA583211440AB00570744 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FEDA5A321144B1300570744 /* LoginViewController.swift in Sources */,
+				7FEDA5A521144DC200570744 /* MessageTableViewCell.swift in Sources */,
 				7FEDA58D211440AB00570744 /* ViewController.swift in Sources */,
+				7FEDA5A7211454D700570744 /* Chat.swift in Sources */,
 				7FEDA58B211440AB00570744 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +389,7 @@
 		};
 		7FEDA59A211440AC00570744 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB73D10433EC4D418DB55FF /* Pods-FirebaseChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +408,7 @@
 		};
 		7FEDA59B211440AC00570744 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9E41736669BD4C8C8B10861 /* Pods-FirebaseChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
